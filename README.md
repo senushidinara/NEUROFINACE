@@ -63,15 +63,14 @@ Traditional FinTech only checks account validity, **not rationality of the mind*
 
 ## 📂 6. Repo Structure
 NeuroFinance/
-├─ data/        # 📁 Facial, typing, behavioral datasets
-├─ models/      # 🤖 ECS ML models
-├─ src/         # ⚙️ Feature extraction, ECS calculation
-├─ dashboard/   # 📊 D3.js charts, UI logic
-├─ app/         # 📱 Mobile/web integration
-├─ docs/        # 📚 Research, instructions, API references
-├─ tests/       # ✅ Unit & integration tests
-├─ README.md    # 📝 Project overview
-
+├── data/        📁 Facial, typing, behavioral datasets
+├── models/      🤖 ECS ML models
+├── src/         ⚙️ Feature extraction, ECS calculation
+├── dashboard/   📊 D3.js charts, UI logic
+├── app/         📱 Mobile/web integration
+├── docs/        📚 Research, instructions, API references
+├── tests/       ✅ Unit & integration tests
+└── README.md    📝 Project overview
 
 
 ---
