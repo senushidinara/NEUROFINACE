@@ -1,0 +1,17 @@
+{
+  "name": "neurofinance-app",
+  "version": "1.0.0",
+  "description": "Emotional Intelligence Fintech using Microservices and Real-Time ML.",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "d3": "^7.8.5",
+    "tailwindcss": "^3.4.4",
+    "lucide-react": "^0.379.0"
+  },
+  "keywords": ["FinTech", "AI", "Cybersecurity", "Microservices"]
+}
