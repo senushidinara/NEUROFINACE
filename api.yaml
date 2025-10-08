@@ -1,0 +1,54 @@
+# ----------------------------------------------------------------------
+# OpenAPI (Swagger) Specification for the Fusion Engine Microservice
+# Used for clear API documentation and contract testing.
+# ----------------------------------------------------------------------
+openapi: 3.0.0
+info:
+  title: NeuroFinance Fusion Engine API
+  version: 1.0.0
+  description: Real-time ML inference service for Emotional Confidence Scoring (ECS).
+  
+servers:
+  - url: http://localhost:8081/api/v1
+    description: Local Development Server
+
+paths:
+  /fusion/calculate_ecs:
+    post:
+      summary: Get Real-Time Emotional Confidence Score
+      description: Accepts pre-processed feature vectors and returns the ECS and factor importance.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                stress_level:
+                  type: number
+                  format: float
+                  description: Normalized stress score (0.0 to 1.0).
+                typing_risk:
+                  type: number
+                  format: float
+                  description: Normalized cognitive risk from typing (0.0 to 1.0).
+                behavioral_risk:
+                  type: number
+                  format: float
+                  description: Risk score from user's historical patterns (0.0 to 1.0).
+      responses:
+        '200':
+          description: Successful ECS calculation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ecs_score:
+                    type: integer
+                  risk_zone:
+                    type: string
+                    enum: [GREEN, YELLOW, RED]
+                  factor_importance:
+                    type: object
+                    description: Breakdown of factor contribution for visualization.
